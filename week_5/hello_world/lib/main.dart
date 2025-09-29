@@ -19,9 +19,22 @@ class MyApp extends StatelessWidget {
     //   home: const MyHomePage(title: 'Flutter Demo Home Page'),
     // );
     // ----- Test MyLayout Widget -----
+    // return MaterialApp(
+    //   home: Scaffold(
+    //     body: MyLayout(),
+    //   ),
+    // );
+    // ----- Test Input dan Selection Widget -----
     return MaterialApp(
       home: Scaffold(
-        body: MyLayout(),
+        appBar: AppBar(title: const Text("Contoh TextField")),
+        body: const TextField(
+          obscureText: false,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Nama',
+          ),
+        ),
       ),
     );
   }
