@@ -34,7 +34,7 @@ Setelah itu saya melakukan styling widget lagi untuk menambahkan widget image pr
 
 Terlihat jika widget saya terjadi overflow, itu terjadi karena memang saya menggunakan `Column()` untuk styling dan menyusun widget secara vertikal dan sebagain konten dari widget tertutup dan tidak dapat terlihat oleh pengguna. 
 
-Maka penyelesaiannya cukup mudah, kita tambahkan `ListView()` agar layar dapat discroll, sehingga konten widget yang tertutup bisa ditampilkan/tidak tertindih, dan hasilnya seperti berikut,
+Maka penyelesaiannya cukup mudah, kita ubah `Column()` menjadi `ListView()` agar layar dapat discroll, sehingga konten widget yang tertutup bisa ditampilkan/tidak tertindih, dan hasilnya seperti berikut,
 
 [![create_new_proj](readme_assets/image_preview_fix.png)]()
 
