@@ -41,6 +41,20 @@ class MyApp extends StatelessWidget {
     ),
   );
 
+  Widget textSection = Container(
+    padding: const EdgeInsets.all(32),
+    child: const Text(
+      'Gunung ini dikenal dengan panorama alam yang memukau, dikelilingi hutan '
+      'lebat serta jalur pendakian yang menantang. Dari puncaknya, pendaki dapat '
+      'menikmati pemandangan luas yang mencakup hamparan awan, perbukitan, hingga '
+      'matahari terbit yang menawan. Selain keindahannya, gunung ini juga memiliki '
+      'nilai sejarah dan budaya yang erat kaitannya dengan masyarakat sekitar. '
+      'Dengan ketinggian yang cukup signifikan, destinasi ini menjadi favorit '
+      'bagi pecinta alam, fotografer, hingga pendaki pemula yang ingin merasakan '
+      'pengalaman mendaki pertama mereka.',
+      softWrap: true,
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +79,7 @@ class MyApp extends StatelessWidget {
           children: [
             titleSection,
             buttonSection,
+            textSection,
           ],
         ),
       ),

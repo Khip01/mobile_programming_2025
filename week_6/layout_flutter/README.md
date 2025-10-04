@@ -14,7 +14,8 @@ Setelah itu saya menambahkan styling widget baru untuk menampilkan baris tombol 
 [![create_new_proj](readme_assets/button_section_column.png)]()
 
 ### Praktikum 3: Implementasi text section
-
+Saya melakukan styling widget baru dengan menambahkan text description section dari halamannya seperti berikut,
+[![create_new_proj](readme_assets/text_description_section.png)]()
 
 ### Praktikum 4: Implementasi image section
 
