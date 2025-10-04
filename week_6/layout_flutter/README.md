@@ -10,9 +10,11 @@ Saya membuat project layout_flutter baru, melakukan styling beberapa widget dan 
 [![create_new_proj](readme_assets/title_section.png)]()
 
 ### Praktikum 2: Implementasi button row
-
+Setelah itu saya menambahkan styling widget baru untuk menampilkan baris tombol CALL, ROUTE, dan SHARE seperti berikut,
+[![create_new_proj](readme_assets/button_section_column.png)]()
 
 ### Praktikum 3: Implementasi text section
+
 
 ### Praktikum 4: Implementasi image section
 
