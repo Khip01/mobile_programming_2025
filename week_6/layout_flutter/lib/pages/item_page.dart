@@ -32,7 +32,8 @@ class ItemPage extends StatelessWidget {
             ),
           ),
           /* soal 3*/
-          Icon(Icons.star, color: Colors.red[500]),
+          Icon(Icons.star, color: Colors.amber),
+          SizedBox(width: 4),
           // const Text('41'),
           Text("${item.star}"),
         ],
@@ -72,9 +73,12 @@ class ItemPage extends StatelessWidget {
     );
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         // title: const Text('Flutter layout demo'),
         title: Text(itemArgs.title),
+        scrolledUnderElevation: 0,
+        backgroundColor: Colors.white,
       ),
       body: ListView(
         children: [

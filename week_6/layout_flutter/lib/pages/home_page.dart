@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layout_flutter/models/item.dart';
+import 'package:layout_flutter/widgets/grid_view_style_widget.dart';
+import 'package:layout_flutter/widgets/list_view_style_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -62,19 +64,14 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Flutter layout - Destination"),
-        automaticallyImplyLeading: false,
+        scrolledUnderElevation: 0,
         backgroundColor: Colors.white,
         actionsPadding: EdgeInsets.only(right: 16),
         actions: [_modeToggleButton()],
       ),
-      body: ListView.builder(
-        padding: EdgeInsets.all(12),
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          final item = items[index];
-          return _buildItemCard(item);
-        },
-      ),
+      body: isGridView
+          ? GridViewStyleWidget(items: items)
+          : ListViewStyleWidget(items: items),
     );
   }
 
@@ -88,114 +85,6 @@ class _HomePageState extends State<HomePage> {
           isGridView = !isGridView;
         });
       },
-    );
-  }
-
-  Widget _buildItemCard(Item item) {
-    void onItemTapAction() {
-      Navigator.pushNamed(context, '/item', arguments: item);
-    }
-
-    return Container(
-      height: 160,
-      margin: EdgeInsets.only(bottom: 12),
-      width: double.maxFinite,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(24),
-        ),
-        elevation: 1,
-        margin: EdgeInsets.zero,
-        color: Colors.white,
-        clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: onItemTapAction,
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              return Padding(
-                padding: const EdgeInsets.all(16),
-                child: Row(
-                  children: [
-                    // image
-                    Container(
-                      clipBehavior: Clip.antiAlias,
-                      height: constraints.maxHeight,
-                      width: constraints.maxHeight - 20,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Hero(
-                        tag: item.imgPath,
-                        child: Image.asset(item.imgPath, fit: BoxFit.cover),
-                      ),
-                    ),
-                    // body
-                    Expanded(
-                      child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 12),
-                        height: constraints.maxHeight,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              item.title,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.location_on_rounded,
-                                  size: 16,
-                                  color: Colors.blue[500],
-                                ),
-                                SizedBox(width: 4),
-                                Text(
-                                  item.location,
-                                  style: TextStyle(color: Colors.blue[500]),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ],
-                            ),
-                            Text(
-                              item.description,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(color: Colors.grey[500]),
-                            ),
-                            SizedBox(
-                              height: 24,
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.star_rate_rounded,
-                                    color: Colors.red[500],
-                                    size: 20,
-                                  ),
-                                  SizedBox(width: 4),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 2),
-                                    child: Text('${item.star}'),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-        ),
-      ),
     );
   }
 }
