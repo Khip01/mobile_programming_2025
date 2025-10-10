@@ -3,11 +3,12 @@ import 'package:layout_flutter/models/item.dart';
 
 class GridViewStyleWidget extends StatelessWidget {
   final List<Item> items;
+  final Function(Item item) callbackItemOnTap;
   final double itemWidth = 100;
   final double itemHeight = 148;
   final double gridPadding = 12;
 
-  const GridViewStyleWidget({super.key, required this.items});
+  const GridViewStyleWidget({super.key, required this.items, required this.callbackItemOnTap});
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +31,7 @@ class GridViewStyleWidget extends StatelessWidget {
   Widget _buildItemCard(Item item, BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(8),
-      onTap: () {
-        Navigator.pushNamed(context, '/item', arguments: item);
-      },
+      onTap: () => callbackItemOnTap(item),
       child: Padding(
         padding: EdgeInsets.only(bottom: 8),
         child: Column(

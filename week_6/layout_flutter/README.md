@@ -70,3 +70,11 @@ Setelah itu saya menambahkan tampilan grid kedalam aplikasi saya, menjadi sepert
 Setelah itu saya juga selesai untuk menambahkan `Hero widget`, untuk hasil akhirnya adalah seperti berikut,
 
 [![hero_grid_list_result](readme_assets/hero_grid_list_result.gif)]()
+
+Lalu saya juga mengubah konfigurasi routing menjadi menggunakan GoRouter (paket flutter resmi dari pub.dev), dan berikut adalah cuplikan kodenya,
+
+[![gorouter_code](readme_assets/gorouter_code.png)]()
+
+Dan berikut adalah pada saat go router dipanggil untuk menampilkan halaman baru,
+
+[![gorouter_code](readme_assets/gorouter_call_code.png)]()

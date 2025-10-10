@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:layout_flutter/models/item.dart';
 
 class ItemPage extends StatelessWidget {
-  ItemPage({super.key});
+  final Item itemArgs;
+
+  ItemPage({super.key, required this.itemArgs});
 
   Widget titleSection(Item item) {
     return Container(
@@ -59,7 +61,7 @@ class ItemPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final itemArgs = ModalRoute.of(context)?.settings.arguments as Item;
+    // final itemArgs = ModalRoute.of(context)?.settings.arguments as Item;
 
     Color color = Theme.of(context).primaryColor;
 

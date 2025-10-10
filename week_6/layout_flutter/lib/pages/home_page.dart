@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:layout_flutter/models/item.dart';
 import 'package:layout_flutter/widgets/grid_view_style_widget.dart';
 import 'package:layout_flutter/widgets/list_view_style_widget.dart';
@@ -60,6 +61,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    void callbackItemOnTap(Item item) {
+      context.goNamed('detail', extra: item);
+    }
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -70,8 +75,14 @@ class _HomePageState extends State<HomePage> {
         actions: [_modeToggleButton()],
       ),
       body: isGridView
-          ? GridViewStyleWidget(items: items)
-          : ListViewStyleWidget(items: items),
+          ? GridViewStyleWidget(
+              items: items,
+              callbackItemOnTap: (item) => callbackItemOnTap(item),
+            )
+          : ListViewStyleWidget(
+              items: items,
+              callbackItemOnTap: (item) => callbackItemOnTap(item),
+            ),
     );
   }
 

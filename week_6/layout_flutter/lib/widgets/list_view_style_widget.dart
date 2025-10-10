@@ -3,8 +3,9 @@ import 'package:layout_flutter/models/item.dart';
 
 class ListViewStyleWidget extends StatelessWidget {
   final List<Item> items;
+  final Function(Item item) callbackItemOnTap;
 
-  const ListViewStyleWidget({super.key, required this.items});
+  const ListViewStyleWidget({super.key, required this.items, required this.callbackItemOnTap});
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +20,13 @@ class ListViewStyleWidget extends StatelessWidget {
   }
 
   Widget _buildItemCard(Item item, BuildContext context) {
-    void onItemTapAction() {
-      Navigator.pushNamed(context, '/item', arguments: item);
-    }
 
     return Container(
       height: 160 - 32,
       margin: EdgeInsets.only(bottom: 12),
       width: double.maxFinite,
       child: InkWell(
-        onTap: onItemTapAction,
+        onTap: () => callbackItemOnTap(item),
         borderRadius: BorderRadius.circular(8),
         child: LayoutBuilder(
           builder: (context, constraints) {
