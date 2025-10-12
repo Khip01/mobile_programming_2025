@@ -48,7 +48,7 @@ Perbedaannya ada pada hasil yang ditampilkan, widget `Text` biasa hanya menampil
 
 5. **Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi ini !**
 
-# 📘 Parameter `AutoSizeText` (Flutter)
+Parameter `AutoSizeText` (Flutter)
 
 | **Parameter** | **Penjelasan** |
 |----------------|----------------|
