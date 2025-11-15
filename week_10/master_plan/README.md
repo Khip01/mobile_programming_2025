@@ -48,19 +48,19 @@ Saya sudah melakukan praktikum 2 dan berikut adalah hasilnya,
 
 
 ## Tugas Praktikum 2
-1. **Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?**
-**Jawab**
+1. **Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?** \
+**Jawab** \
 Yang dimaksud dari InheritedWidget disini adalah widget dasar dari flutter untuk mempermudah kita untuk berkomunikasi dengan widget turunan/properti yang ada dibawah widget tree induk.
 Lalu, mengapa disini kita menggunakan InheritedNotifier? Itu karena kita ingin memberikan notifikasi perubahan/mengabari perubahan ke properti yang ada dibawah tree dari induk, dalam kasus ini propertinya adalah class List\<Task>. 
 Jadi state dari properti List\<Task> tadi akan berubah ketika class induk yaitu Plan() telah mengalami perubahan.
 
-2. **Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?**
-**Jawab**
+2. **Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?** \
+**Jawab** \
 Itu adalah method sederhana dari class Plan(), adalah sebuah method getter untuk mendapatkan hasil yang diinginkan, diantaranya:
 - untuk mendapatkan total task yang telah selesai
 - untuk mendapatkan string yang telah diinterpolasi dan disesuaikan
 
-3. **Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!**
+3. **Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!** \
 **Jawab**
 <div style="display: flex; justify-content: center; align-items: center;">
   <img src="readme_assets/Screencast_20251115_163411.gif" style="max-height: 500;"/>
@@ -77,15 +77,15 @@ Saya sudah melakukan praktikum 3 dan hasilnya adalah seperti berikut,
 </div>
 
 ## Tugas Praktikum 3
-1. **Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!** \
+1. **Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!**
 
-[![task](readme_assets/Pasted image 20251115175658.png)]()
+[![task](readme_assets/Pasted%20image%2020251115175658.png)]()
 
 **Jawab** \
 Jadi menurut saya, gambar tersebut menggambarkan tentang bagaimana WidgetTree disusun pada saat kita melakukan Navigator.push() atau berpindah halaman dari PlanCreatorScreen ke PlanScreen. Itu menggambarkan bagaimana bentuk WidgetTree setelah dilakukannya Navigator.push(). 
 Yang dimana setelah melakukan Navigator.push(), WidgetTree awal (layar PlanCreatorScreen) akan di timpa dengan WidgetTree tujuannya (layar PlanScreen). 
 
-2. **Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!**
+2. **Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!** \
 **Jawab** \
 Berikut adalah hasil dari seluruh percobaan sampai dengan langkah 14 saya (dan juga beberapa perbaikan kode yang hasilnya tidak sesuai harapan),
 <div style="display: flex; justify-content: center; align-items: center;">
