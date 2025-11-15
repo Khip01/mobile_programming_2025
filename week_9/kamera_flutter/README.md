@@ -11,20 +11,20 @@ Lalu di praktikum 1 ini saya memberika n isi kode ini,
 
 Dan berikut adalah hasilnya,
 <div style="display: flex; justify-content: center; align-items: center;">
-<img src="Pasted image 20251106170905.png" style="max-height: 500;"/>
-<img src="Screenshot_2025-11-06-17-29-14-822_com.example.kamera_flutter.jpg" style="max-height: 500;"/>
+<img src="readme_assets/Pasted image 20251106170905.png" style="max-height: 500;"/>
+<img src="readme_assets/Screenshot_2025-11-06-17-29-14-822_com.example.kamera_flutter.jpg" style="max-height: 500;"/>
 </div>
 Terlihat jika saya berhasil menggunakan kamera di aplikasi flutter saya.
 
 ## Praktikum 2
 Saya melanjutkan project `kamera_flutter` saya, dan seperti inilah hasil pertamanya,
 <div style="display: flex; justify-content: center; align-items: center;">
-<img src="Screenshot_2025-11-06-19-37-58-094_com.example.kamera_flutter.jpg" style="max-height: 500;"/>
+<img src="readme_assets/Screenshot_2025-11-06-19-37-58-094_com.example.kamera_flutter.jpg" style="max-height: 500;"/>
 </div>
 
 Jadi saya perbaiki menjadi seperti ini,
 <div style="display: flex; justify-content: center; align-items: center;">
-<img src="Screenshot_2025-11-06-19-56-41-788_com.example.kamera_flutter.jpg" style="max-height: 500;"/>
+<img src="readme_assets/Screenshot_2025-11-06-19-56-41-788_com.example.kamera_flutter.jpg" style="max-height: 500;"/>
 </div>
 
 ## Tugas Praktikum
